@@ -1,11 +1,24 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using Notes.Data;
+using System.IO;
 namespace Notes
 {
     public partial class App : Application
     {
+        static NotesDB notesDB;
+        public static NotesDB NotesDB
+        {
+            get
+            {
+                if(notesDB!=null)
+                {
+                    notesDB = new NotesDB(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"NoteDataBase.db3"));
+                }
+                return notesDB;
+            }
+        }
 
         public App()
         {
