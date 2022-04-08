@@ -12,7 +12,7 @@ namespace Notes
         {
             get
             {
-                if(notesDB!=null)
+                if(notesDB==null)
                 {
                     notesDB = new NotesDB(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"NoteDataBase.db3"));
                 }

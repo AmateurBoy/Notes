@@ -4,9 +4,7 @@
              x:Class="Notes.Views.InfoPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image Source="Osnova.png" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

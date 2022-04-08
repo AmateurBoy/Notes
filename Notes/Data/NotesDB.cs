@@ -26,7 +26,7 @@ namespace Notes.Data
         }
         public Task<int> SaveNoteAsync(Note note)
         {
-            if(note.ID !=0)
+            if(note.ID != 0)
             {
                 return DB.UpdateAsync(note);
             }
