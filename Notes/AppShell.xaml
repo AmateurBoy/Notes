@@ -3,16 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.AppShell"
              xmlns:views ="clr-namespace:Notes.Views">
-    
-    <TabBar>
-        <ShellContent
+
+    <TabBar Shell.BackgroundColor="Black"  Shell.ForegroundColor="Wheat" Shell.TabBarTitleColor="#82764B"  Shell.TabBarUnselectedColor="Wheat">
+        <ShellContent             
             Title="MeNotes"
             Icon="Osnova.png"
             ContentTemplate="{DataTemplate views:NotePage}"
             >
         </ShellContent>
 
-        <ShellContent
+        <ShellContent 
+            
             Title="INFO"
             Icon="pngegg.png"
             ContentTemplate="{DataTemplate views:InfoPage}"

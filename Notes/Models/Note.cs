@@ -12,6 +12,8 @@ namespace Notes.Models
         public int ID { get; set; }
         public string ContentNotesText { get; set; }
         public DateTime Date { get; set; }
+        
+        
 
     }
 }

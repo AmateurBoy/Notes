@@ -5,8 +5,12 @@ using System.Threading.Tasks;
 
 namespace Notes.Data
 {
-   public class NotesDB
+    public class NotesDB
     {
+
+        /// <summary>
+        /// Обновить базу данных добавить туда клас ответсвенен за расположение обектов и от туда вягивать координаты.
+        /// </summary>
         readonly SQLiteAsyncConnection DB;
         public NotesDB(string connect)
         {
@@ -26,7 +30,7 @@ namespace Notes.Data
         }
         public Task<int> SaveNoteAsync(Note note)
         {
-            if(note.ID != 0)
+            if (note.ID != 0)
             {
                 return DB.UpdateAsync(note);
             }
@@ -38,6 +42,15 @@ namespace Notes.Data
         public Task<int> DelNoteAsync(Note note)
         {
             return DB.DeleteAsync(note);
+        }
+        public async void AllDell()
+        {
+            foreach (var item in await GetNotesAsync())
+            {
+                await DelNoteAsync(item);
+
+            }
+
         }
     }
 }

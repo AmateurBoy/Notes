@@ -16,6 +16,7 @@ namespace Notes
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(NoteAddingPage), typeof(NoteAddingPage));
+            
         }
     }
 }

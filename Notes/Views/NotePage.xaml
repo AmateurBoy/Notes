@@ -3,26 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.NotePage">
 
-    <ContentPage.ToolbarItems>
+    
+    
+    <ContentPage.ToolbarItems >
+        
         <ToolbarItem Text="Add" Clicked="AddButton_Clicked">
             
         </ToolbarItem>
+        <ToolbarItem Text="AllDel" Clicked="DelClick" >
+
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
 
-    <CollectionView x:Name="collectionView" Margin="20" SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged">
-        <CollectionView.ItemsLayout>
-            <LinearItemsLayout Orientation="Vertical" ItemSpacing="10">
-
-            </LinearItemsLayout>
-        </CollectionView.ItemsLayout>
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout>
-                    <Label Text="{Binding ContentNotesText}" FontSize="Medium" TextColor="Black"/>
-                    <Label Text="{Binding Date}" FontSize="Small" TextColor="Chocolate"/>
-                </StackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+    <ScrollView x:Name="ScrollContent" BackgroundColor="#3B3B3B " >
+        
+    </ScrollView>
     
+
 </ContentPage>

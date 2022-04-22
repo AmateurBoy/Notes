@@ -27,6 +27,7 @@ namespace Notes.Views
                 int id = Convert.ToInt32(value);
                     Note note = await App.NotesDB.GetNoteAsync(id);
                     BindingContext = note;
+                
             }
             catch { }
         }
@@ -35,16 +36,18 @@ namespace Notes.Views
             BindingContext = new Note();
             InitializeComponent();
             
+
         }
 
         private async void SaveButton_Clicked(object sender, EventArgs e)
         {
             Note note = (Note)BindingContext;
-            note.Date = DateTime.UtcNow;
+            note.Date = DateTime.Now;
             if (!string.IsNullOrWhiteSpace(note.ContentNotesText))
             {
                 await App.NotesDB.SaveNoteAsync(note);
             }
+
             await Shell.Current.GoToAsync("..");
 
         }

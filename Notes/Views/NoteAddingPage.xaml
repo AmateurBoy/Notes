@@ -3,12 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.NoteAddingPage">
     <ContentPage.Content>
-        <StackLayout>
+        
+        <StackLayout BackgroundColor="Black">
             <StackLayout Margin="20">
-                <Editor Placeholder="Note Text" Text="{Binding ContentNotesText}" HeightRequest="100" />
+                <Editor Placeholder="Note Text" Text="{Binding ContentNotesText}" HeightRequest="100" BackgroundColor="Wheat"/>
                 <Grid ColumnDefinitions="*,*">
-                    <Button Text="Save" Clicked="SaveButton_Clicked"/>
-                    <Button Grid.Column="1" Text="Del" Clicked="DelButton_Clicked"/>
+                    <Button Text="Save" Clicked="SaveButton_Clicked" BackgroundColor="Wheat"/>
+                    <Button Grid.Column="1" Text="Del" Clicked="DelButton_Clicked" BackgroundColor="Wheat"/>
                 </Grid>
             </StackLayout>
             
